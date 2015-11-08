@@ -1,2 +1,7 @@
-# Minnehack2015
-Holding the horrible code we wrote for Minnehack 2015
+# Minnehack
+Repo used to collect Minnehack work for team VizLab
+
+I hope we win!
+Me too!
+
+#butts

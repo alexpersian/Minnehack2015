@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>SpotWalk Product Entry</title>
+    <!--
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!--
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    -->
+</head>
+<body>
+Welcome to SpotWalk Product Entry!<br />
+<div id="barcodes"></div>
+<label for="barcode">Barcode:</label>
+<input type="text" id="barcode">
+<label for="dpci">DPCI:</label>
+<input type="text" id="dpci">
+<button id="send">Add</button>
+<script>
+    $(document).ready(function() {
+        var barcodesDiv = $("#barcodes")
+                ,   barcodeToAdd = $("#barcode")
+                ,   dpciToAdd = $("#dpci")
+                ,   sendButton = $("#send");
+
+        sendButton.click(function() {
+            var barcode = barcodeToAdd.val();
+            $.ajax({
+                type: "POST",
+                url: "/item",
+                data: {
+                    "barcode":barcodeToAdd.val(),
+                    "dpci":dpciToAdd.val()
+                },
+                success: function(resp) {
+                    console.log(resp);
+                },
+                dataType: "json"
+            });
+        });
+    });
+</script>
+</body>
+</html>

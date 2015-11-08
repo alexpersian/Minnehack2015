@@ -1,0 +1,15 @@
+{
+  "name": "targethealth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steve Henningsgard <hest0401@stcloudstate.edu> (http://stevehenningsgard.com)",
+  "license": "ISC"
+}
